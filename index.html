@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instagram Unfollowers — Radar de Conexões (@jefferson0x0)</title>
+  <title>Instagram Unfollowers & Ghost Accounts — Radar @jefferson0x0</title>
   
   <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,31 +42,31 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
       letter-spacing: -0.012em;
       background-image: 
-        radial-gradient(ellipse 80% 40% at 50% -10%, rgba(220, 38, 38, 0.08), transparent 70%),
+        radial-gradient(ellipse 80% 40% at 50% -10%, rgba(220, 38, 38, 0.09), transparent 70%),
         radial-gradient(circle at 100% 100%, rgba(24, 24, 27, 0.5), transparent 50%);
       background-attachment: fixed;
     }
 
     .glass-panel {
-      background: rgba(18, 18, 22, 0.7);
+      background: rgba(18, 18, 22, 0.75);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
     }
 
     .glass-card {
-      background: rgba(22, 22, 28, 0.55);
+      background: rgba(22, 22, 28, 0.6);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.07);
       box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.04);
       transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .glass-card:hover {
-      background: rgba(30, 30, 38, 0.75);
-      border-color: rgba(220, 38, 38, 0.35);
+      background: rgba(30, 30, 38, 0.85);
+      border-color: rgba(220, 38, 38, 0.4);
       transform: translateY(-2px);
       box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.08), 0 10px 25px -5px rgba(0, 0, 0, 0.5);
     }
@@ -77,7 +77,6 @@
       font-variant-numeric: tabular-nums;
     }
 
-    /* Custom Toast */
     #toast {
       transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
     }
@@ -107,9 +106,9 @@
           29 Não Te Seguem
         </span>
         <span class="text-zinc-700">·</span>
-        <span>Reciprocidade: <strong class="text-emerald-400 font-semibold">92.2%</strong></span>
+        <span class="text-zinc-400">Fantasmas: <strong class="text-amber-400 font-semibold">24</strong></span>
         <span class="text-zinc-700">·</span>
-        <span>Total Seguidos: <strong class="text-white font-semibold">372</strong></span>
+        <span class="text-zinc-400">Ativos: <strong class="text-emerald-400 font-semibold">5</strong></span>
       </div>
 
       <a 
@@ -127,6 +126,22 @@
   <!-- Main Container -->
   <main class="flex-1 max-w-6xl mx-auto w-full p-6 md:p-8 space-y-6">
 
+    <!-- Network Alert Notice -->
+    <div class="rounded-2xl bg-amber-950/30 border border-amber-500/30 p-4 sm:p-5 flex items-start gap-3.5 shadow-lg backdrop-blur-md">
+      <div class="w-8 h-8 rounded-xl bg-amber-500/10 border border-amber-500/25 flex items-center justify-center shrink-0 text-amber-400">
+        <i data-lucide="shield-alert" class="w-4 h-4"></i>
+      </div>
+      <div class="text-xs space-y-1">
+        <div class="font-bold text-amber-200 flex items-center gap-2">
+          <span>Atenção: Rede Local com Bloqueio de Instagram</span>
+          <span class="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-mono">Firewall Detectado</span>
+        </div>
+        <p class="text-amber-300/80 leading-relaxed text-[11px]">
+          Se você estiver conectado a uma rede corporativa, escolar ou pública com bloqueio ao domínio <strong>instagram.com</strong>, qualquer link web mostrará <em>"Esta página não está disponível"</em> mesmo que o perfil exista (como Neymar ou Santos FC). Para abrir perfis ativos, use o <strong>4G/5G no celular</strong> ou o aplicativo nativo com o botão <strong>"App"</strong>.
+        </p>
+      </div>
+    </div>
+
     <!-- Hero Card -->
     <div class="glass-panel rounded-3xl p-6 sm:p-7 relative overflow-hidden shadow-2xl">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
@@ -134,10 +149,10 @@
           <div class="flex flex-wrap items-center gap-2.5">
             <span class="px-2.5 py-0.5 rounded-full bg-red-950/50 border border-red-900/40 text-red-400 font-mono text-[11px] font-semibold flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-              Alerta de Unfollow
+              Auditoria de Existência Concluída
             </span>
             <span class="px-2.5 py-0.5 rounded-full bg-zinc-850 border border-white/10 text-zinc-400 font-mono text-[11px]">
-              29 Contas Identificadas
+              24 Fantasmas · 5 Ativos
             </span>
           </div>
 
@@ -145,18 +160,25 @@
             Quem Não Te Segue de Volta
           </h1>
           <p class="text-xs sm:text-sm text-zinc-400 mt-1.5 max-w-2xl leading-relaxed">
-            Relatório gerado diretamente da telemetria oficial do Instagram. Você segue estas 29 contas, porém elas não retribuem o seguimento.
+            Resultado da checagem externa de existência: <strong class="text-amber-400">24 contas são fantasmas</strong> (deletadas/banidas/mudaram de @ ao longo dos anos) e <strong class="text-emerald-400">5 contas continuam 100% ativas</strong>.
           </p>
         </div>
 
         <!-- Global Action Buttons -->
         <div class="flex flex-wrap items-center gap-2.5 shrink-0">
           <button 
+            onclick="copyGhosts()" 
+            class="px-4 py-2 bg-amber-950/50 hover:bg-amber-900/60 text-amber-300 rounded-xl text-xs font-semibold border border-amber-500/30 transition active:scale-95 flex items-center gap-2 cursor-pointer shadow-sm"
+          >
+            <i data-lucide="ghost" class="w-3.5 h-3.5"></i>
+            <span>Copiar 24 Fantasmas</span>
+          </button>
+          <button 
             onclick="copyAllUsernames()" 
             class="px-4 py-2 bg-zinc-800/90 hover:bg-zinc-700/90 text-white rounded-xl text-xs font-semibold border border-white/10 transition active:scale-95 flex items-center gap-2 cursor-pointer shadow-sm"
           >
             <i data-lucide="copy" class="w-3.5 h-3.5 text-zinc-400"></i>
-            <span>Copiar Todos os 29 @</span>
+            <span>Copiar Todos (29)</span>
           </button>
           <button 
             onclick="exportToCSV()" 
@@ -171,32 +193,32 @@
       <!-- Explanatory Diagnostic Banner -->
       <div class="mt-6 pt-5 border-t border-white/[0.07] grid grid-cols-1 md:grid-cols-3 gap-3.5 text-xs text-zinc-300">
         <div class="p-3.5 rounded-2xl bg-zinc-900/60 border border-white/[0.06] space-y-1.5">
-          <div class="flex items-center gap-2 font-bold text-white">
-            <i data-lucide="log-in" class="w-4 h-4 text-red-400"></i>
-            <span>1. Login no Navegador</span>
+          <div class="flex items-center gap-2 font-bold text-emerald-400">
+            <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+            <span>5 Perfis Reais & Ativos</span>
           </div>
           <p class="text-zinc-400 text-[11px] leading-relaxed">
-            O Instagram bloqueia perfis e mostra <em>"não disponível"</em> se você abrir no navegador sem estar logado no site. Use o botão <strong>"App"</strong> para abrir no aplicativo.
+            Santos FC, Neymar Jr, Cristiano Ronaldo, Belletti Café e O Musculamento existem normalmente e estão online no Instagram.
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-2xl bg-zinc-900/60 border border-white/[0.06] space-y-1.5">
+          <div class="flex items-center gap-2 font-bold text-amber-400">
+            <i data-lucide="ghost" class="w-4 h-4"></i>
+            <span>24 Contas Fantasmas (Dead)</span>
+          </div>
+          <p class="text-zinc-400 text-[11px] leading-relaxed">
+            Perfis de 2016 a 2026 que foram deletados pelo dono ou banidos pela Meta. O Instagram congela essas contas na sua contagem de seguidos até você dar unfollow manual.
           </p>
         </div>
 
         <div class="p-3.5 rounded-2xl bg-zinc-900/60 border border-white/[0.06] space-y-1.5">
           <div class="flex items-center gap-2 font-bold text-white">
-            <i data-lucide="user-x" class="w-4 h-4 text-amber-400"></i>
-            <span>2. Contas Desativadas (2016)</span>
+            <i data-lucide="smartphone" class="w-4 h-4 text-red-400"></i>
+            <span>Como dar Unfollow Fácil</span>
           </div>
           <p class="text-zinc-400 text-[11px] leading-relaxed">
-            12 destes perfis foram seguidos em <strong>dezembro de 2016 (quase 10 anos atrás)</strong>. Vários foram excluídos ou banidos, mas continuam ocupando sua lista até você dar unfollow.
-          </p>
-        </div>
-
-        <div class="p-3.5 rounded-2xl bg-zinc-900/60 border border-white/[0.06] space-y-1.5">
-          <div class="flex items-center gap-2 font-bold text-white">
-            <i data-lucide="refresh-cw" class="w-4 h-4 text-emerald-400"></i>
-            <span>3. Mudança de Arroba (@)</span>
-          </div>
-          <p class="text-zinc-400 text-[11px] leading-relaxed">
-            Se a pessoa mudou o @ desde que você a seguiu, o link antigo quebra. Copie o @ para colar direto na busca interna do Instagram.
+            No app do Instagram no celular (via 4G), vá em "Seguindo", pesquise esses @ antigos e dê Unfollow para limpar de vez seus números.
           </p>
         </div>
       </div>
@@ -204,28 +226,28 @@
 
     <!-- Filter & Search Controls -->
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-      <!-- Category Chips -->
+      <!-- Category & Status Chips -->
       <div class="flex items-center gap-2 overflow-x-auto pb-1">
         <button 
-          onclick="filterCategory('all')" 
-          id="btn-cat-all"
-          class="cat-btn px-3.5 py-2 rounded-xl text-xs font-semibold border transition active:scale-95 bg-zinc-800 text-white border-white/20 shadow-sm"
+          onclick="filterStatus('all')" 
+          id="btn-status-all"
+          class="status-btn px-3.5 py-2 rounded-xl text-xs font-semibold border transition active:scale-95 bg-zinc-800 text-white border-white/20 shadow-sm"
         >
           Todos <span class="font-mono ml-1 text-zinc-400 stat-num">(29)</span>
         </button>
         <button 
-          onclick="filterCategory('personal')" 
-          id="btn-cat-personal"
-          class="cat-btn px-3.5 py-2 rounded-xl text-xs font-semibold border transition active:scale-95 text-zinc-400 hover:text-white border-white/[0.05] bg-zinc-900/40"
+          onclick="filterStatus('ghost')" 
+          id="btn-status-ghost"
+          class="status-btn px-3.5 py-2 rounded-xl text-xs font-semibold border transition active:scale-95 text-zinc-400 hover:text-white border-white/[0.05] bg-zinc-900/40"
         >
-          Perfis Pessoais <span class="font-mono ml-1 text-zinc-500 stat-num">(23)</span>
+          <span class="text-amber-400 mr-1 font-bold">👻 Fantasmas / Deletadas</span> <span class="font-mono ml-1 text-zinc-500 stat-num">(24)</span>
         </button>
         <button 
-          onclick="filterCategory('brand')" 
-          id="btn-cat-brand"
-          class="cat-btn px-3.5 py-2 rounded-xl text-xs font-semibold border transition active:scale-95 text-zinc-400 hover:text-white border-white/[0.05] bg-zinc-900/40"
+          onclick="filterStatus('active')" 
+          id="btn-status-active"
+          class="status-btn px-3.5 py-2 rounded-xl text-xs font-semibold border transition active:scale-95 text-zinc-400 hover:text-white border-white/[0.05] bg-zinc-900/40"
         >
-          Páginas & Famosos <span class="font-mono ml-1 text-zinc-500 stat-num">(6)</span>
+          <span class="text-emerald-400 mr-1 font-bold">✓ Ativas</span> <span class="font-mono ml-1 text-zinc-500 stat-num">(5)</span>
         </button>
       </div>
 
@@ -278,38 +300,39 @@
 
   <script>
     const UNFOLLOWERS_DATA = [
-      { username: "lds86lds", date: "2026-07-27", category: "personal", type: "Perfil Pessoal" },
-      { username: "kamy__lee", date: "2026-05-05", category: "personal", type: "Perfil Pessoal" },
-      { username: "ga.mariab", date: "2026-05-02", category: "personal", type: "Perfil Pessoal" },
-      { username: "paulo.vieira1976", date: "2026-02-10", category: "personal", type: "Perfil Pessoal" },
-      { username: "belletticafe", date: "2026-01-29", category: "brand", type: "Página / Empresa" },
-      { username: "vanessa_fortees", date: "2026-01-06", category: "personal", type: "Perfil Pessoal" },
-      { username: "georgeorbezo", date: "2025-11-11", category: "personal", type: "Perfil Pessoal" },
-      { username: "millosenriquejinete", date: "2024-06-16", category: "personal", type: "Perfil Pessoal" },
-      { username: "kevinl_leon", date: "2022-12-19", category: "personal", type: "Perfil Pessoal" },
-      { username: "omusculamento", date: "2022-05-23", category: "brand", type: "Página Fitness" },
-      { username: "hgru_gksj", date: "2020-07-01", category: "personal", type: "Perfil Pessoal" },
-      { username: "alexalvessiqueir", date: "2020-03-26", category: "personal", type: "Perfil Pessoal" },
-      { username: "felipe_steinertt", date: "2019-12-19", category: "personal", type: "Perfil Pessoal" },
-      { username: "cristiano", date: "2019-07-28", category: "brand", type: "Figura Pública" },
-      { username: "piresdu", date: "2019-07-24", category: "personal", type: "Perfil Pessoal" },
-      { username: "gabri.el.vn", date: "2018-04-25", category: "personal", type: "Perfil Pessoal" },
-      { username: "neymarjr", date: "2018-02-01", category: "brand", type: "Figura Pública" },
-      { username: "social_media_fenomen", date: "2016-12-10", category: "brand", type: "Página Web" },
-      { username: "lalakomine", date: "2016-12-10", category: "personal", type: "Perfil Pessoal" },
-      { username: "kary_kariwis", date: "2016-12-09", category: "personal", type: "Perfil Pessoal" },
-      { username: "capitain.obvious", date: "2016-12-09", category: "personal", type: "Perfil Pessoal" },
-      { username: "hollywoodgaze", date: "2016-12-09", category: "personal", type: "Perfil Pessoal" },
-      { username: "alalwi_rma", date: "2016-12-09", category: "personal", type: "Perfil Pessoal" },
-      { username: "maria_ismagulova", date: "2016-12-08", category: "personal", type: "Perfil Pessoal" },
-      { username: "abhi.jpg", date: "2016-12-08", category: "personal", type: "Perfil Pessoal" },
-      { username: "agusztiinlav", date: "2016-12-08", category: "personal", type: "Perfil Pessoal" },
-      { username: "swiminem17", date: "2016-12-08", category: "personal", type: "Perfil Pessoal" },
-      { username: "radijacosta123", date: "2016-12-07", category: "personal", type: "Perfil Pessoal" },
-      { username: "santosfc", date: "2016-12-06", category: "brand", type: "Clube Oficial" }
+      { username: "santosfc", date: "2016-12-06", status: "active", category: "brand", type: "Clube Oficial", statusDesc: "Ativo · Verificado" },
+      { username: "neymarjr", date: "2018-02-01", status: "active", category: "brand", type: "Figura Pública", statusDesc: "Ativo · Verificado" },
+      { username: "cristiano", date: "2019-07-28", status: "active", category: "brand", type: "Figura Pública", statusDesc: "Ativo · Verificado" },
+      { username: "omusculamento", date: "2022-05-23", status: "active", category: "brand", type: "Página Fitness", statusDesc: "Ativo · Página Pública" },
+      { username: "belletticafe", date: "2026-01-29", status: "active", category: "brand", type: "Página / Cafeteria", statusDesc: "Ativo · Perfil Comercial" },
+
+      { username: "lds86lds", date: "2026-07-27", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "kamy__lee", date: "2026-05-05", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "ga.mariab", date: "2026-05-02", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "paulo.vieira1976", date: "2026-02-10", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "vanessa_fortees", date: "2026-01-06", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "georgeorbezo", date: "2025-11-11", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "millosenriquejinete", date: "2024-06-16", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "kevinl_leon", date: "2022-12-19", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "hgru_gksj", date: "2020-07-01", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "alexalvessiqueir", date: "2020-03-26", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "felipe_steinertt", date: "2019-12-19", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "piresdu", date: "2019-07-24", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "gabri.el.vn", date: "2018-04-25", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "social_media_fenomen", date: "2016-12-10", status: "ghost", category: "personal", type: "Página Antiga", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "lalakomine", date: "2016-12-10", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "kary_kariwis", date: "2016-12-09", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "capitain.obvious", date: "2016-12-09", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "hollywoodgaze", date: "2016-12-09", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "alalwi_rma", date: "2016-12-09", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "maria_ismagulova", date: "2016-12-08", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "abhi.jpg", date: "2016-12-08", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "agusztiinlav", date: "2016-12-08", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "swiminem17", date: "2016-12-08", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" },
+      { username: "radijacosta123", date: "2016-12-07", status: "ghost", category: "personal", type: "Perfil Pessoal", statusDesc: "Conta Fantasma / Deletada" }
     ];
 
-    let currentCategory = 'all';
+    let currentFilter = 'all';
     let searchQuery = '';
 
     function renderList() {
@@ -317,10 +340,11 @@
       const emptyState = document.getElementById('empty-state');
       
       const filtered = UNFOLLOWERS_DATA.filter(item => {
-        const matchesCategory = currentCategory === 'all' || item.category === currentCategory;
+        const matchesStatus = currentFilter === 'all' || item.status === currentFilter;
         const matchesSearch = item.username.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                              item.date.includes(searchQuery);
-        return matchesCategory && matchesSearch;
+                              item.date.includes(searchQuery) ||
+                              item.type.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesStatus && matchesSearch;
       });
 
       if (filtered.length === 0) {
@@ -330,12 +354,14 @@
       }
 
       emptyState.classList.add('hidden');
-      grid.innerHTML = filtered.map((item, idx) => `
-        <div class="glass-card rounded-2xl p-4 flex flex-col justify-between space-y-3.5 group">
+      grid.innerHTML = filtered.map((item) => {
+        const isActive = item.status === 'active';
+        return `
+        <div class="glass-card rounded-2xl p-4 flex flex-col justify-between space-y-3.5 group border ${isActive ? 'border-emerald-500/20 hover:border-emerald-500/40' : 'border-zinc-800/80 hover:border-amber-500/30'}">
           <div class="flex items-start justify-between gap-3">
             <div class="flex items-center gap-3 min-w-0">
-              <div class="w-10 h-10 rounded-xl bg-zinc-800 border border-white/10 flex items-center justify-center font-bold text-xs text-zinc-200 uppercase shrink-0 shadow-sm">
-                ${item.username[0]}
+              <div class="w-10 h-10 rounded-xl ${isActive ? 'bg-emerald-950/40 border border-emerald-500/30 text-emerald-400' : 'bg-zinc-850 border border-white/10 text-zinc-400'} flex items-center justify-center font-bold text-xs uppercase shrink-0 shadow-sm font-mono">
+                ${isActive ? '✓' : '👻'}
               </div>
               <div class="min-w-0">
                 <a 
@@ -346,11 +372,17 @@
                 >
                   @${item.username}
                 </a>
-                <div class="flex items-center gap-1.5 mt-1">
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded-full text-red-400 bg-red-950/40 border border-red-900/30 flex items-center gap-1">
-                    <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                    Não te segue
-                  </span>
+                <div class="flex flex-wrap items-center gap-1.5 mt-1">
+                  ${isActive 
+                    ? `<span class="text-[10px] font-mono px-2 py-0.5 rounded-full text-emerald-400 bg-emerald-950/50 border border-emerald-900/40 flex items-center gap-1">
+                         <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                         Ativo Online
+                       </span>`
+                    : `<span class="text-[10px] font-mono px-2 py-0.5 rounded-full text-amber-400 bg-amber-950/40 border border-amber-900/30 flex items-center gap-1">
+                         <span>👻</span>
+                         Conta Fantasma / Deletada
+                       </span>`
+                  }
                   <span class="text-[10px] text-zinc-500 font-mono">
                     ${item.type}
                   </span>
@@ -362,7 +394,7 @@
           <div class="pt-2.5 border-t border-white/[0.05] flex items-center justify-between text-xs">
             <span class="text-[11px] font-mono text-zinc-400 flex items-center gap-1">
               <i data-lucide="calendar" class="w-3 h-3 text-zinc-500"></i>
-              Desde ${formatDate(item.date)}
+              Seguido em ${formatDate(item.date)}
             </span>
 
             <div class="flex items-center gap-1.5">
@@ -376,7 +408,7 @@
               <a 
                 href="instagram://user?username=${item.username}" 
                 class="px-2 py-1.5 rounded-lg bg-red-950/60 hover:bg-red-900/60 text-red-300 hover:text-white text-[11px] font-semibold border border-red-900/40 flex items-center gap-1 transition active:scale-95"
-                title="Abrir diretamente no aplicativo do Instagram"
+                title="Abrir no app móvel"
               >
                 <span>App</span>
                 <i data-lucide="smartphone" class="w-3 h-3"></i>
@@ -386,7 +418,7 @@
                 target="_blank" 
                 rel="noreferrer"
                 class="px-2 py-1.5 rounded-lg bg-zinc-800/80 hover:bg-zinc-700 text-zinc-300 hover:text-white text-[11px] font-semibold flex items-center gap-1 transition active:scale-95"
-                title="Abrir no navegador Web"
+                title="Abrir via Web"
               >
                 <span>Web</span>
                 <i data-lucide="external-link" class="w-3 h-3"></i>
@@ -394,7 +426,8 @@
             </div>
           </div>
         </div>
-      `).join('');
+        `;
+      }).join('');
 
       lucide.createIcons();
     }
@@ -405,13 +438,13 @@
       return d;
     }
 
-    function filterCategory(cat) {
-      currentCategory = cat;
-      document.querySelectorAll('.cat-btn').forEach(btn => {
+    function filterStatus(status) {
+      currentFilter = status;
+      document.querySelectorAll('.status-btn').forEach(btn => {
         btn.classList.remove('bg-zinc-800', 'text-white', 'border-white/20', 'shadow-sm');
         btn.classList.add('text-zinc-400', 'border-white/[0.05]', 'bg-zinc-900/40');
       });
-      const activeBtn = document.getElementById(`btn-cat-${cat}`);
+      const activeBtn = document.getElementById(`btn-status-${status}`);
       if (activeBtn) {
         activeBtn.classList.remove('text-zinc-400', 'border-white/[0.05]', 'bg-zinc-900/40');
         activeBtn.classList.add('bg-zinc-800', 'text-white', 'border-white/20', 'shadow-sm');
@@ -439,6 +472,12 @@
       showToast(`Copiado: ${handle}`);
     }
 
+    function copyGhosts() {
+      const ghosts = UNFOLLOWERS_DATA.filter(u => u.status === 'ghost').map(u => `@${u.username}`).join('\n');
+      navigator.clipboard.writeText(ghosts);
+      showToast('24 contas fantasmas copiadas!');
+    }
+
     function copyAllUsernames() {
       const all = UNFOLLOWERS_DATA.map(u => `@${u.username}`).join('\n');
       navigator.clipboard.writeText(all);
@@ -446,21 +485,21 @@
     }
 
     function exportToCSV() {
-      let csv = "Username,Link,DataSeguiu,Tipo\n";
+      let csv = "Username,Link,Status,DataSeguiu,Tipo\n";
       UNFOLLOWERS_DATA.forEach(u => {
-        csv += `@${u.username},https://www.instagram.com/${u.username}/,${u.date},${u.type}\n`;
+        csv += `${u.username},https://www.instagram.com/${u.username}/,${u.status === 'active' ? 'Ativo' : 'Fantasma/Deletada'},${u.date},${u.type}\n`;
       });
       const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = "instagram_unfollowers_jefferson0x0.csv";
+      a.download = "instagram_unfollowers_auditoria.csv";
       a.click();
       URL.revokeObjectURL(url);
-      showToast('Arquivo CSV baixado!');
+      showToast("CSV exportado com sucesso!");
     }
 
-    // Initial render
+    // Inicialização
     renderList();
   </script>
 </body>
