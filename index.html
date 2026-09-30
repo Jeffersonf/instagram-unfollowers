@@ -145,7 +145,7 @@
             Quem Não Te Segue de Volta
           </h1>
           <p class="text-xs sm:text-sm text-zinc-400 mt-1.5 max-w-2xl leading-relaxed">
-            Relatório estático gerado diretamente da telemetria oficial do Instagram. Você segue estas 29 contas, porém elas não retribuem o seguimento.
+            Relatório gerado diretamente da telemetria oficial do Instagram. Você segue estas 29 contas, porém elas não retribuem o seguimento.
           </p>
         </div>
 
@@ -165,6 +165,39 @@
             <i data-lucide="download" class="w-3.5 h-3.5"></i>
             <span>Exportar CSV</span>
           </button>
+        </div>
+      </div>
+
+      <!-- Explanatory Diagnostic Banner -->
+      <div class="mt-6 pt-5 border-t border-white/[0.07] grid grid-cols-1 md:grid-cols-3 gap-3.5 text-xs text-zinc-300">
+        <div class="p-3.5 rounded-2xl bg-zinc-900/60 border border-white/[0.06] space-y-1.5">
+          <div class="flex items-center gap-2 font-bold text-white">
+            <i data-lucide="log-in" class="w-4 h-4 text-red-400"></i>
+            <span>1. Login no Navegador</span>
+          </div>
+          <p class="text-zinc-400 text-[11px] leading-relaxed">
+            O Instagram bloqueia perfis e mostra <em>"não disponível"</em> se você abrir no navegador sem estar logado no site. Use o botão <strong>"App"</strong> para abrir no aplicativo.
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-2xl bg-zinc-900/60 border border-white/[0.06] space-y-1.5">
+          <div class="flex items-center gap-2 font-bold text-white">
+            <i data-lucide="user-x" class="w-4 h-4 text-amber-400"></i>
+            <span>2. Contas Desativadas (2016)</span>
+          </div>
+          <p class="text-zinc-400 text-[11px] leading-relaxed">
+            12 destes perfis foram seguidos em <strong>dezembro de 2016 (quase 10 anos atrás)</strong>. Vários foram excluídos ou banidos, mas continuam ocupando sua lista até você dar unfollow.
+          </p>
+        </div>
+
+        <div class="p-3.5 rounded-2xl bg-zinc-900/60 border border-white/[0.06] space-y-1.5">
+          <div class="flex items-center gap-2 font-bold text-white">
+            <i data-lucide="refresh-cw" class="w-4 h-4 text-emerald-400"></i>
+            <span>3. Mudança de Arroba (@)</span>
+          </div>
+          <p class="text-zinc-400 text-[11px] leading-relaxed">
+            Se a pessoa mudou o @ desde que você a seguiu, o link antigo quebra. Copie o @ para colar direto na busca interna do Instagram.
+          </p>
         </div>
       </div>
     </div>
@@ -341,12 +374,21 @@
                 <i data-lucide="copy" class="w-3.5 h-3.5"></i>
               </button>
               <a 
+                href="instagram://user?username=${item.username}" 
+                class="px-2 py-1.5 rounded-lg bg-red-950/60 hover:bg-red-900/60 text-red-300 hover:text-white text-[11px] font-semibold border border-red-900/40 flex items-center gap-1 transition active:scale-95"
+                title="Abrir diretamente no aplicativo do Instagram"
+              >
+                <span>App</span>
+                <i data-lucide="smartphone" class="w-3 h-3"></i>
+              </a>
+              <a 
                 href="https://www.instagram.com/${item.username}/" 
                 target="_blank" 
                 rel="noreferrer"
-                class="px-2.5 py-1.5 rounded-lg bg-zinc-800/80 hover:bg-zinc-700 text-zinc-200 hover:text-white text-[11px] font-semibold flex items-center gap-1 transition active:scale-95"
+                class="px-2 py-1.5 rounded-lg bg-zinc-800/80 hover:bg-zinc-700 text-zinc-300 hover:text-white text-[11px] font-semibold flex items-center gap-1 transition active:scale-95"
+                title="Abrir no navegador Web"
               >
-                <span>Perfil</span>
+                <span>Web</span>
                 <i data-lucide="external-link" class="w-3 h-3"></i>
               </a>
             </div>
